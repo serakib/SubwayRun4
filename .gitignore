@@ -1,0 +1,4 @@
+target/
+web/pkg/
+Cargo.lock
+.DS_Store
