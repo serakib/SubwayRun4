@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Defender — Rust + WebAssembly</title>
+  <meta name="description" content="Cyber Defender, an original browser arcade game built with Rust and WebAssembly.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">RUST // WASM</p>
+        <h1>CYBER DEFENDER</h1>
+      </div>
+      <div class="status">● ONLINE GAME</div>
+    </header>
+
+    <section class="game-card">
+      <canvas id="game" width="960" height="640" aria-label="Cyber Defender game"></canvas>
+    </section>
+
+    <section class="controls">
+      <div><b>Move</b> WASD / Arrow Keys</div>
+      <div><b>Fire</b> Space / Mouse Hold</div>
+      <div><b>Pause</b> P / Esc</div>
+      <div><b>Restart</b> R after game over</div>
+    </section>
+
+    <p class="mobile-note">On mobile: touch and drag to move, keep touching to fire.</p>
+    <footer>Rust + WebAssembly • Local high score • No backend</footer>
+  </main>
+
+  <script type="module">
+    import init from "./pkg/cyber_defender.js";
+    init();
+  </script>
+</body>
+</html>
